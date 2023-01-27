@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.headerDiv {
+  width: 100vw;
+  height: 10vh;
+  background-color: white;
+  border-bottom: 1px solid lightgrey;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerTitle {
+  color: #008080;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.selector {
+  width: 20vw;
+  height: 7%;
+  border: 1px solid lightgrey;
+  border-radius: 500px;
+  box-shadow: 0 0 3px lightgrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 2vh;
+  left: 40vw;
+}
+
+.h1Selector {
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  width: 50%;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  cursor: pointer;
+}
+
+.destinationSelector {
+  border-right: 0.5px solid lightgrey;
+}
+
+.guestsSelector {
+  border-left: 0.5px solid lightgrey;
+}
+
+.listingContainer {
+  margin-top: 10vh;
+  width: 100%;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}/*# sourceMappingURL=style.css.map */
