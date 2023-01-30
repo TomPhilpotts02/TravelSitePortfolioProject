@@ -36,6 +36,7 @@
   position: fixed;
   bottom: 2vh;
   left: 40vw;
+  background-color: white;
 }
 
 .h1Selector {
@@ -57,13 +58,73 @@
   border-left: 0.5px solid lightgrey;
 }
 
+.columnFlex {
+  display: flex;
+  flex-direction: column;
+}
+
+.standardFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+}
+
 .listingContainer {
-  margin-top: 10vh;
   width: 100%;
   padding-top: 2vh;
   padding-bottom: 2vh;
-  border: 1px solid black;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+}
+
+.listingImageContainer {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  height: 20vw;
+  margin: 3vh 2.5vw 0 2.5vw;
+  margin-top: 10vh;
+  cursor: pointer;
+}
+
+.listingImage {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.listingInfoContainer {
+  width: 20vw;
+  height: 10vh;
+  margin: 0 2.5vw 0 2.5vw;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.listingTitle {
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.listingNameandDesc {
+  font-weight: 300;
+  padding-top: 5px;
+}
+
+.listingRating {
+  text-decoration: underline;
+}
+
+.listingPrice {
+  font-weight: 600;
+  text-decoration: underline;
+  padding-top: 5px;
 }/*# sourceMappingURL=style.css.map */

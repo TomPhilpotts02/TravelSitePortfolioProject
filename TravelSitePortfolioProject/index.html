@@ -20,17 +20,29 @@
     <!--SELECTOR-->
 
     <div class="selector">
-        <h1 class="h1Selector destinationSelector">Where?</h1>
+        <h1 class="h1Selector destinationSelector" onclick="whereFilter()">Where?</h1>
         <h1 class="h1Selector guestsSelector">Add Guests</h1>
     </div>
 
-    <!--LISTING BOXES-->
-    
-    <div class="listingContainer">
-        
-        
+    <!--LISTING CONTAINER-->
 
+    <div class="listingContainer" id="listingContainer"></div>
+
+    <!--WHERE? MODAL-->
+
+    <div class="whereModalContainer">
+        <div class="whereOptions">
+            <h1 class="england whereOption">England</h1>
+            <h1 class="scotland whereOption">Scotland</h1>
+            <h1 class="ireland whereOption">Ireland</h1>
+            <h1 class="germany whereOption">Germany</h1>
+            <h1 class="italy whereOption">Italy</h1>
+            <h1 class="sweden whereOption">Sweden</h1>
+            <h1 class="switzerland whereOption">Switzerland</h1>
+            <h1 class="spain whereOption">Spain</h1>
+        </div>
     </div>
+
 
     <script src="script.js"></script>
 </body>
