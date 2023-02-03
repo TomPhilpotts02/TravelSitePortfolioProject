@@ -13,8 +13,10 @@
   position: fixed;
   top: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  z-index: 1000;
+  display: flex;
 }
 
 .headerTitle {
@@ -22,21 +24,20 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 2rem;
+  margin-left: 7vw;
 }
 
 .selector {
   width: 20vw;
-  height: 7%;
+  height: 70%;
   border: 1px solid lightgrey;
   border-radius: 500px;
   box-shadow: 0 0 3px lightgrey;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  position: fixed;
-  bottom: 2vh;
-  left: 40vw;
   background-color: white;
+  margin-right: 7vw;
 }
 
 .h1Selector {
@@ -47,15 +48,30 @@
   text-align: center;
   padding-top: 2%;
   padding-bottom: 2%;
-  cursor: pointer;
 }
 
 .destinationSelector {
-  border-right: 0.5px solid lightgrey;
+  border-left: 0.5px solid lightgrey;
+  cursor: pointer;
 }
 
 .guestsSelector {
-  border-left: 0.5px solid lightgrey;
+  border-right: 0.5px solid lightgrey;
+  display: flex;
+  justify-content: center;
+}
+
+.guestInput {
+  width: 80%;
+  border: none;
+  height: 50%;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.guestInput:focus {
+  outline: none;
 }
 
 .columnFlex {
@@ -76,6 +92,7 @@
   padding-bottom: 2vh;
   display: flex;
   flex-wrap: wrap;
+  transition: all 1s;
 }
 
 .listingImageContainer {
@@ -127,4 +144,96 @@
   font-weight: 600;
   text-decoration: underline;
   padding-top: 5px;
+}
+
+.whereModalContainer {
+  position: fixed;
+  height: 10vh;
+  width: 100%;
+  background-color: white;
+  top: 0vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+  transition: all 1s;
+}
+
+.whereOption {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  background-color: #b7e4e4;
+  padding: 5px 15px;
+  border-radius: 50px;
+  width: 10vw;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.whereOption:hover {
+  background-color: #94baba;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.loading {
+  position: absolute;
+  height: 100vh;
+  top: 10vh;
+  left: 0;
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.loading::after {
+  width: 5vw;
+  height: 5vw;
+  content: "";
+  border: 15px solid lightgrey;
+  border-top-color: #008080;
+  border-radius: 50%;
+  -webkit-animation: loading 0.75s ease infinite;
+          animation: loading 0.75s ease infinite;
+  margin-bottom: 5vw;
+}
+
+@-webkit-keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+.everywhere {
+  background-color: #e4c3b7;
+}
+
+.everywhere:hover {
+  background-color: #bb9f94;
 }/*# sourceMappingURL=style.css.map */

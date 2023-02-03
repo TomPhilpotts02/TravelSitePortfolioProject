@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,15 +15,15 @@
     <header>
         <div class="headerDiv">
             <h1 class="headerTitle">landbnb</h1>
+            <div class="selector">
+                
+                <div class="h1Selector guestsSelector">
+                    <input type="number" id="guestInput" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" class="guestInput" placeholder="Guests" min="0" max="10"></input>
+                </div>
+                <h1 class="h1Selector destinationSelector" onclick="whereFilter()">Where?</h1>
+            </div>
         </div>
     </header>
-
-    <!--SELECTOR-->
-
-    <div class="selector">
-        <h1 class="h1Selector destinationSelector" onclick="whereFilter()">Where?</h1>
-        <h1 class="h1Selector guestsSelector">Add Guests</h1>
-    </div>
 
     <!--LISTING CONTAINER-->
 
@@ -30,19 +31,21 @@
 
     <!--WHERE? MODAL-->
 
-    <div class="whereModalContainer">
-        <div class="whereOptions">
-            <h1 class="england whereOption">England</h1>
-            <h1 class="scotland whereOption">Scotland</h1>
-            <h1 class="ireland whereOption">Ireland</h1>
-            <h1 class="germany whereOption">Germany</h1>
-            <h1 class="italy whereOption">Italy</h1>
-            <h1 class="sweden whereOption">Sweden</h1>
-            <h1 class="switzerland whereOption">Switzerland</h1>
-            <h1 class="spain whereOption">Spain</h1>
-        </div>
+    <div class="whereModalContainer" id="whereOptions">
+            <h1 class="whereOption" id="england" onclick="whereButton(this.id)">England</h1>
+            <h1 class="whereOption" id="scotland" onclick="whereButton(this.id)">Scotland</h1>
+            <h1 class="whereOption" id="ireland" onclick="whereButton(this.id)">Ireland</h1>
+            <h1 class="whereOption" id="germany" onclick="whereButton(this.id)">Germany</h1>
+            <h1 class="whereOption" id="italy" onclick="whereButton(this.id)">Italy</h1>
+            <h1 class="whereOption" id="sweden" onclick="whereButton(this.id)">Sweden</h1>
+            <h1 class="whereOption" id="switzerland" onclick="whereButton(this.id)">Switzerland</h1>
+            <h1 class="whereOption" id="spain" onclick="whereButton(this.id)">Spain</h1>
+            <h1 class="whereOption everywhere" id="everywhere" onclick="whereButton(this.id)">Everywhere</h1>
     </div>
+    
+    <!-- LOADING ICON -->
 
+    <div class="loading"></div>
 
     <script src="script.js"></script>
 </body>
