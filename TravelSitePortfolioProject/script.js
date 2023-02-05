@@ -51,7 +51,7 @@ let listingDetails = propertyListings.map(({location, guests,rating, name,desc,p
     return `
     <div class="columnFlex" id="masterListingContainer">
     <div class="listingImageContainer" id="listingImageContainer">
-        <img src='${photo}' class='listingImage' />
+        <img src='${photo}' class='listingImage' onclick="location.href = '" />
     </div>
     <div class="listingInfoContainer">
         <div class="standardFlex">
@@ -79,11 +79,13 @@ const whereFilter = () => {
     if (whereMenu === 1) {
         document.getElementById('whereOptions').style.transform = 'translateY(10vh';
         document.getElementById('listingContainer').style.transform = 'translateY(10vh)';
+        document.getElementById('whereOptions').style.visibility = 'visible';
         whereMenu++;
         return
     } if (whereMenu === 2) {
         document.getElementById('whereOptions').style.transform = 'translateY(-10vh';
         document.getElementById('listingContainer').style.transform = 'translateY(0vh)';
+        document.getElementById('whereOptions').style.visibility = 'hidden';
         whereMenu--;
         return
     }
@@ -122,7 +124,7 @@ document.getElementById('guestInput').addEventListener("keyup", function(event) 
                 return `
                 <div class="columnFlex" id="masterListingContainer">
                 <div class="listingImageContainer" id="listingImageContainer">
-                    <img src='${photo}' class='listingImage' />
+                <img src='${photo}' class='listingImage' />
                 </div>
                 <div class="listingInfoContainer">
                     <div class="standardFlex">
@@ -159,7 +161,7 @@ const whereButton = (clickedId) => {
             return `
             <div class="columnFlex" id="masterListingContainer">
             <div class="listingImageContainer" id="listingImageContainer">
-                <img src='${photo}' class='listingImage' />
+            <img src='${photo}' class='listingImage' />
             </div>
             <div class="listingInfoContainer">
                 <div class="standardFlex">
@@ -179,6 +181,7 @@ const whereButton = (clickedId) => {
         listingContainer.innerHTML = everywhereJoinedDetails
 
         document.getElementById('whereOptions').style.transform = 'translateY(-10vh';
+        document.getElementById('whereOptions').style.visibility = 'hidden';
         document.getElementById('listingContainer').style.transform = 'translateY(0vh)';
         whereMenu--;
 
@@ -194,7 +197,7 @@ const whereButton = (clickedId) => {
         return `
         <div class="columnFlex" id="masterListingContainer">
         <div class="listingImageContainer" id="listingImageContainer">
-            <img src='${photo}' class='listingImage' />
+        <img src='${photo}' class='listingImage' />
         </div>
         <div class="listingInfoContainer">
             <div class="standardFlex">
@@ -213,6 +216,7 @@ const whereButton = (clickedId) => {
     let listingContainer = document.getElementById('listingContainer');
     listingContainer.innerHTML = joinedLocationDetails
     document.getElementById('whereOptions').style.transform = 'translateY(-10vh';
+    document.getElementById('whereOptions').style.visibility = 'hidden';
     document.getElementById('listingContainer').style.transform = 'translateY(0vh)';
     whereMenu--;
 }} else {
@@ -228,7 +232,7 @@ const whereButton = (clickedId) => {
             return `
             <div class="columnFlex" id="masterListingContainer">
             <div class="listingImageContainer" id="listingImageContainer">
-                <img src='${photo}' class='listingImage' />
+            <img src='${photo}' class='listingImage' />
             </div>
             <div class="listingInfoContainer">
                 <div class="standardFlex">
@@ -259,7 +263,7 @@ const whereButton = (clickedId) => {
         return `
         <div class="columnFlex" id="masterListingContainer">
         <div class="listingImageContainer" id="listingImageContainer">
-            <img src='${photo}' class='listingImage' />
+        <img src='${photo}' class='listingImage' />
         </div>
         <div class="listingInfoContainer">
             <div class="standardFlex">

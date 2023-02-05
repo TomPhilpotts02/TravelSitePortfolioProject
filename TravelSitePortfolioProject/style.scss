@@ -102,6 +102,7 @@ $defaultfont: 'Montserrat', sans-serif;
     display: flex;
     flex-wrap: wrap;
     transition: all 1s;
+    justify-content: space-around;
 }
 
 .listingImageContainer {
@@ -124,7 +125,7 @@ $defaultfont: 'Montserrat', sans-serif;
 
 .listingInfoContainer {
     width: 20vw;
-    height: 10vh;
+    height: 20vh;
     margin: 0 2.5vw 0 2.5vw;
     display: flex;
     flex-direction: column;
@@ -163,6 +164,8 @@ $defaultfont: 'Montserrat', sans-serif;
     align-items: center;
     border-bottom: 1px solid lightgrey;
     transition: all 1s;
+    visibility: hidden;
+    flex-wrap: wrap;
 }
 
 .whereOption {
@@ -231,3 +234,66 @@ input[type=number] {
 .everywhere:hover {
     background-color: $selectedalternativecolor;
 }
+
+// SCALING
+
+@media only screen and (max-width: 1200px) {
+    .listingImageContainer{
+      width: 25vw;
+      height: 25vw;
+    }
+    .listingInfoContainer {
+        width: 25vw;
+        height: 15vh;
+        font-size: 1rem;
+    }
+    .listingTitle {
+        font-size: 1rem;
+    }
+    .selector {
+        width: 30vw;
+        height: 50%;
+    }
+    .whereOption {
+        width: 15vw;
+        font-size: 0.75rem;
+    }
+    .whereModalContainer {
+        justify-content: center;
+        gap: 10px;
+    }
+  }
+
+@media only screen and (max-width: 800px) {
+    .listingImageContainer{
+      width: 40vw;
+      height: 40vw;
+    }
+    .listingInfoContainer {
+        width: 40vw;
+        height: 20vh;
+        font-size: 1rem;
+    }
+    .listingTitle {
+        font-size: 1rem;
+    }
+    .h1Selector, .guestInput {
+        font-size: 0.75rem;
+    }
+    .whereOption {
+        width: 20vw;
+        font-size: 0.6rem;
+    }
+    .whereModalContainer {
+        justify-content: center;
+        gap: 10px;
+    }
+  }
+
+  @media only screen and (max-height: 600px) {
+    .listingInfoContainer {
+        width: 40vw;
+        height: 30vh;
+        font-size: 1rem;
+    }
+  }
